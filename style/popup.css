@@ -37,6 +37,7 @@ button {
   display: flex;
   align-items: center;
   outline: none;
+  text-align: center;
 }
 
 button:hover {

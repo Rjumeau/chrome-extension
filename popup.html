@@ -1,2 +1,39 @@
-<!-- TODO: Create your menu using HTML. -->
-<!-- You can add the style/popup.css stylesheet using <link rel="stylesheet" href="style/popup.css"> -->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome extension</title>
+  <link rel="stylesheet" href="style/popup.css">
+  </head>
+</head>
+<body>
+    <!-- [1] -->
+    <div id="modal-1" aria-hidden="true">
+
+      <!-- [2] -->
+      <div tabindex="-1" data-micromodal-close>
+
+        <!-- [3] -->
+        <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+
+
+          <header>
+            <h2 id="modal-1-title">
+              Modal Title
+            </h2>
+
+            <!-- [4] -->
+            <button aria-label="Close modal" data-micromodal-close></button>
+          </header>
+
+          <div id="modal-1-content">
+            Modal Content
+          </div>
+
+        </div>
+      </div>
+    </div>
+  <script src="scripts/popup.js"></script>
+</body>
+</html>
