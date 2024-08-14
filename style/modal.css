@@ -1,0 +1,7 @@
+#modal-1 {
+  display: none;
+}
+
+#modal-1.is-open {
+  display: block;
+}
