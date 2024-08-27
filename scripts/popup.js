@@ -36,6 +36,7 @@ const getSelectedFavorites = (favoritesList, completedCheckboxes) => {
 }
 
 
+// Todo : signin form
 const signIn = (form) => {
   const email = form.querySelector("input[name='email'").value
   const password = form.querySelector("input[name='password'").value
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   })
 })
 
+// Listener ici
 signInForm.addEventListener('submit', (event) => {
   event.preventDefault()
   signIn(signInForm)

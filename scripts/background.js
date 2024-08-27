@@ -1,3 +1,5 @@
+
+// Call Post method
 const postFavorites = (favorites) => {
   chrome.storage.local.get(['token', 'user'], function(result) {
     const token = result.token;
@@ -20,6 +22,7 @@ const postFavorites = (favorites) => {
 }
 
 
+// Appel du post ici
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.action === 'postFavorites') {
