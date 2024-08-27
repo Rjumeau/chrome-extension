@@ -5,9 +5,12 @@
   "author": "Your name",
   "version": "1",
   "content_scripts": [
-    { "matches": ["<all_urls>" ],
+    { "matches": ["https://www.leboncoin.fr/favorites*", "https://www.vinted.fr/member/items/favourite_list*" ],
     "js": ["scripts/content.js"] }
   ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
   "action": {
     "default_title": "Click to make go link for URL",
     "default_popup": "popup.html",
@@ -18,7 +21,11 @@
       "128": "images/icon128.png"
     }
   },
-  "permissions": ["activeTab", "storage"],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "background"
+  ],
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",

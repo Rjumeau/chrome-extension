@@ -5,12 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chrome extension</title>
   <link rel="stylesheet" href="style/popup.css">
+  <link rel="stylesheet" href="style/login.css">
   </head>
 </head>
 <body>
-  <button id="select">
-    <p>Ajoutez vos favoris</p>
-  </button>
+  <div class="form-wrapper">
+    <h1>Sign In</h1>
+    <form id="signIn">
+      <div class="form-item">
+        <label for="email"></label>
+        <input type="email" name="email" required="required" placeholder="Email Address" autocomplete="off"></input>
+      </div>
+      <div class="form-item">
+        <label for="password"></label>
+        <input type="password" name="password" required="required" placeholder="Password"></input>
+      </div>
+      <div class="button-panel">
+        <input type="submit" class="button" title="Sign In" value="Sign In"></input>
+      </div>
+    </form>
+    <div class="form-footer">
+      <p><a href="#">Create an account</a></p>
+      <p><a href="#">Forgot password?</a></p>
+    </div>
+  </div>
+  <div class="welcome-wrapper d-none">
+    <h2 class="welcome-user"></h2>
+    <button id="select">Ajoutez vos favoris</button>
+  </div>
+  <div id="results">
+  </div>
+  <button class="d-none" id="submitBtn">Valider ma liste</button>
+  <h2 class="success-title d-none">Vos favoris ont bien été ajoutés</h2>
+  <template id="favoriteTemplate">
+    <div class="favorite-item">
+      <img src="" alt="">
+      <p>Item title</p>
+      <input type="checkbox" name="selected-favorite" checked>
+    </div>
+  </template>
   <script src="scripts/popup.js"></script>
 </body>
 </html>
